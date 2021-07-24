@@ -29,6 +29,8 @@ def run():
         Work_accident = st.number_input('Work_accident',  min_value=0, max_value=50, value=0)
         promotion_last_5years = st.number_input('promotion_last_5years',  min_value=0, max_value=50, value=0)
         salary = st.selectbox('salary', ['low', 'high','medium'])
+        department = st.selectbox('department', ['sales','accounting','hr','technical','support','management','IT','product_mng','marketing','RandD'])
+        average_montly_hours =st.number_input('average_montly_hours',min_value=1, max_value=1000, value=1)
         output=""
         input_dict={'satisfaction_level':satisfaction_level,'last_evaluation':last_evaluation,'number_project':number_project,'time_spend_company':time_spend_company,'Work_accident': Work_accident,'promotion_last_5years':promotion_last_5years,'salary' : salary}
         input_df = pd.DataFrame([input_dict])
