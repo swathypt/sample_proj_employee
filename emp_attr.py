@@ -16,12 +16,12 @@ def run():
     st.image(image,use_column_width=True)
     add_selectbox = st.sidebar.selectbox(
     "How would you like to predict?",
-    ("Online", "Batch"))
+    ("Form", "Batch"))
     st.sidebar.info('This app is created to predict if an employee will leave the company')
     st.sidebar.success('https://www.pycaret.org')
     st.sidebar.image(image_office)
     st.title("Predicting employee leaving")
-    if add_selectbox == 'Online':
+    if add_selectbox == 'Form':
         satisfaction_level=st.number_input('satisfaction_level' , min_value=0.1, max_value=1.0, value=0.1)
         last_evaluation =st.number_input('last_evaluation',min_value=0.1, max_value=1.0, value=0.1)
         number_project = st.number_input('number_project', min_value=0, max_value=50, value=5)
