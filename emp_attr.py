@@ -36,8 +36,12 @@ def run():
         input_df = pd.DataFrame([input_dict])
         if st.button("Predict"):
             output = predict(model=model, input_df=input_df)
-            output = str(output)
-        st.success('The output is {}'.format(output))
+            if output = 1:
+                output = "leave the company :( "
+            else:
+                output = "continue :)"
+            #output = str(output)
+        st.success('Employee will {}'.format(output))
     if add_selectbox == 'Batch':
         file_upload = st.file_uploader("Upload csv file for predictions", type=["csv"])
         if file_upload is not None:
