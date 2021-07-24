@@ -15,7 +15,7 @@ def run():
     from PIL import Image
     image = Image.open('employeeleftimage.jpg')
     image_office = Image.open('office.jpg')
-    st.sidebar.date_input('Date',datetime.date(2021,07,24))
+    st.sidebar.date_input('Date',datetime.date(2021,7,24))
     
     st.image(image,use_column_width=True)
     add_selectbox = st.sidebar.selectbox(
