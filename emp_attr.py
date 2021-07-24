@@ -32,7 +32,7 @@ def run():
         department = st.selectbox('department', ['sales','accounting','hr','technical','support','management','IT','product_mng','marketing','RandD'])
         average_montly_hours =st.number_input('average_montly_hours',min_value=1, max_value=1000, value=1)
         output=""
-        input_dict={'satisfaction_level':satisfaction_level,'last_evaluation':last_evaluation,'number_project':number_project,'time_spend_company':time_spend_company,'Work_accident': Work_accident,'promotion_last_5years':promotion_last_5years,'salary' : salary}
+        input_dict={'satisfaction_level':satisfaction_level,'last_evaluation':last_evaluation,'number_project':number_project,'time_spend_company':time_spend_company,'Work_accident': Work_accident,'promotion_last_5years':promotion_last_5years,'salary' : salary,'department':department,'average_montly_hours':average_montly_hours}
         input_df = pd.DataFrame([input_dict])
         if st.button("Predict"):
             output = predict(model=model, input_df=input_df)
