@@ -36,7 +36,7 @@ def run():
         input_df = pd.DataFrame([input_dict])
         if st.button("Predict"):
             output = predict(model=model, input_df=input_df)
-            if output = 1:
+            if output == 1:
                 output = "leave the company :( "
             else:
                 output = "continue :)"
