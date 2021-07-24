@@ -2,6 +2,8 @@ from pycaret.classification import load_model, predict_model
 import streamlit as st
 import pandas as pd
 import numpy as np
+import datetime
+
 model = load_model('trained_model')
 
 def predict(model, input_df):
@@ -13,6 +15,8 @@ def run():
     from PIL import Image
     image = Image.open('employeeleftimage.jpg')
     image_office = Image.open('office.jpg')
+    st.sidebar.date_input('Date',datetime.date(2021,07,24))
+    
     st.image(image,use_column_width=True)
     add_selectbox = st.sidebar.selectbox(
     "How would you like to predict?",
